@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:id="@+id/countdown_layout"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dip">
+        <EditText
+            android:id="@+id/tian"
+            android:hint="天"
+            android:text="0"
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/shi"
+            android:hint="时"
+            android:text="0"
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/fen"
+            android:hint="分"
+            android:text="0"
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/miao"
+            android:hint="秒"
+            android:text="0"
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:onClick="start"
+            android:text="strat"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/daojishi_rl"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dip"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/describe_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitXY"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/describe_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_toRightOf="@+id/describe_iv"
+            android:text="距离开始还有"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/days_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="4dp"
+            android:layout_toRightOf="@+id/describe_tv"
+            android:background="#c2c2c2"
+            android:gravity="center"
+            android:text=""
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/colon0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="3.0dip"
+            android:layout_toRightOf="@+id/days_tv"
+            android:text="天"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/daojishi_rl"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/hours_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/colon1"
+            android:background="#c2c2c2"
+            android:gravity="center"
+            android:text="23"
+            android:padding="3dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/colon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:layout_marginRight="3.0dip"
+            android:layout_toLeftOf="@+id/minutes_tv"
+            android:text=":"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/minutes_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/colon2"
+            android:background="#c2c2c2"
+            android:gravity="center"
+            android:text="59"
+            android:padding="3dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/colon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3.0dip"
+            android:layout_marginRight="3.0dip"
+            android:layout_toLeftOf="@+id/seconds_tv"
+            android:text=":"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/seconds_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#c2c2c2"
+            android:gravity="center"
+            android:text="59"
+            android:padding="3dp"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
